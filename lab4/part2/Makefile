@@ -7,7 +7,7 @@ tests: FORCE Schedule_Tests
 FORCE: ;
 
 Schedule_Tests: tests.cpp Schedule.o Course.o Assignment.o 
-	g++ -Wall -std=c++17 -g tests.cpp Schedule.o Course.o Assignment.o -I /opt/homebrew/include/ -L /opt/homebrew/lib/ -l gtest -l gtest_main -pthread -o Schedule_Tests
+	g++ -Wall -std=c++17 -g tests.cpp Schedule.o Course.o Assignment.o -I /home/linuxbrew/.linuxbrew/include/ -L /home/linuxbrew/.linuxbrew/lib/ -l gtest -l gtest_main -pthread -o Schedule_Tests
 
 Schedule.o: Schedule.h Schedule.cpp Course.h Assignment.h
 	g++ -Wall -std=c++17 -g -c Schedule.cpp -o Schedule.o

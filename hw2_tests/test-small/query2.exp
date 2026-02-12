@@ -1,0 +1,95 @@
+=====================================
+Menu: 
+  AND term term ...                  
+  OR term term ...                   
+  DIFF term not-present-term not-present-term ... 
+  PRINT page                         
+  INCOMING page                      
+  OUTGOING page                      
+  QUIT                               
+=====================================
+
+search-shell (prompt) $: 
+8
+test-small/pga.md
+test-small/pgc.md
+test-small/pgg.md
+test-small/pgb.md
+test-small/pge.md
+test-small/pgf.md
+test-small/pgd.md
+test-small/pgh.txt
+
+search-shell (prompt) $: 
+2
+test-small/pgg.md
+test-small/pgh.txt
+
+search-shell (prompt) $: 
+3
+test-small/pgg.md
+test-small/pgf.md
+test-small/pgh.txt
+
+search-shell (prompt) $: 
+0
+
+search-shell (prompt) $: 
+1
+test-small/pgf.md
+
+search-shell (prompt) $: 
+2
+test-small/pga.md
+test-small/pgb.md
+
+search-shell (prompt) $: 
+5
+test-small/pga.md
+test-small/pgg.md
+test-small/pge.md
+test-small/pgf.md
+test-small/pgd.md
+
+search-shell (prompt) $: 
+1
+test-small/pgf.md
+
+search-shell (prompt) $: 
+8
+test-small/pga.md
+test-small/pgc.md
+test-small/pgg.md
+test-small/pgb.md
+test-small/pge.md
+test-small/pgf.md
+test-small/pgd.md
+test-small/pgh.txt
+
+search-shell (prompt) $: 
+3
+test-small/pgg.md
+test-small/pgf.md
+test-small/pgh.txt
+
+search-shell (prompt) $: 
+8
+test-small/pga.md
+test-small/pgc.md
+test-small/pgg.md
+test-small/pgb.md
+test-small/pge.md
+test-small/pgf.md
+test-small/pgd.md
+test-small/pgh.txt
+
+search-shell (prompt) $: 
+0
+
+search-shell (prompt) $: 
+3
+test-small/pga.md
+test-small/pgc.md
+test-small/pgb.md
+
+search-shell (prompt) $: 

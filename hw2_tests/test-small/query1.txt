@@ -1,0 +1,11 @@
+PRINT test-small/pga.md
+PRINT test-small/pgb.md
+INCOMING test-small/pga.md
+OUTGOING test-small/pga.md
+INCOMING test-small/pgb.md
+OUTGOING test-small/pgb.md
+INCOMING test-small/pgc.md
+OUTGOING test-small/pgc.md
+INCOMING test-small/pgf.md
+OUTGOING test-small/pgf.md
+QUIT

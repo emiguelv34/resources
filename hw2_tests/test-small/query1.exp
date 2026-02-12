@@ -1,0 +1,64 @@
+=====================================
+Menu: 
+  AND term term ...                  
+  OR term term ...                   
+  DIFF term not-present-term not-present-term ... 
+  PRINT page                         
+  INCOMING page                      
+  OUTGOING page                      
+  QUIT                               
+=====================================
+
+search-shell (prompt) $: 
+U$SC tAblE CHAIR! ;desk class,room
+Computer-Science#104*is really,really5times,really#great.Correct?
+
+This [lInK1] [link2] 
+
+commona
+commonb
+uniquea
+search-shell (prompt) $: 
+[another link1] [link2] [link3]
+
+commona
+coMMonb
+uniqueb
+search-shell (prompt) $: 
+1
+test-small/pgb.md
+
+search-shell (prompt) $: 
+2
+test-small/pgc.md
+test-small/pgg.md
+
+search-shell (prompt) $: 
+1
+test-small/pgc.md
+
+search-shell (prompt) $: 
+3
+test-small/pga.md
+test-small/pge.md
+test-small/pgf.md
+
+search-shell (prompt) $: 
+3
+test-small/pga.md
+test-small/pge.md
+test-small/pgd.md
+
+search-shell (prompt) $: 
+1
+test-small/pgb.md
+
+search-shell (prompt) $: 
+2
+test-small/pgb.md
+test-small/pge.md
+
+search-shell (prompt) $: 
+0
+
+search-shell (prompt) $: 

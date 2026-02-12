@@ -1,0 +1,14 @@
+AND commona commonb 
+AND cOmMoNa commond commone commonf commong
+AND commonf
+AND uniquea uniquef
+AND uniquef
+OR uniquea uniqueb 
+OR uNiQuEa uniqued uniquee uniquef uniqueg
+OR uniquef
+OR commona commonf
+OR commonf
+DIFF commona
+DIFF commona commonb 
+DIFF commona commond commone commonf
+QUIT

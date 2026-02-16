@@ -1,5 +1,5 @@
 CC = g++
-CPPFLAGS = -g -Wall -std=c++11
+CPPFLAGS = -g -Wall -std=c++17
 GTEST_LL = -I /usr/include/gtest/ -l gtest -l gtest_main -pthread
 
 test: stonesTest

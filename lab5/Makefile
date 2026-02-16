@@ -1,10 +1,26 @@
-all: pokedex
+CC = g++
+CPPFLAGS = -g -Wall -std=c++11
+GTEST_LL = -I /usr/include/gtest/ -l gtest -l gtest_main -pthread
 
-pokedex: main.cpp llist.h
-	g++ -g -Wall -std=c++11 main.cpp -o pokedex
-	valgrind --leak-check=yes ./pokedex
+test: stonesTest
+	./stonesTest
 
-.PHONY: clean
+heap_test: heapTest
+	./heapTest
+
+heapTest: heap_test.cpp max_heap.h
+	$(CC) $(CPPFLAGS) $< $(GTEST_LL) -o $@
+
+stonesTest: stonesTest.o stones.o
+	$(CC) $(CPPFLAGS) $^ $(GTEST_LL) -o $@
+
+stonesTest.o: stonesTest.cpp
+	$(CC) $(CPPFLAGS) -c $< -o $@
+
+stones.o: stones.cpp stones.h
+	$(CC) $(CPPFLAGS) -c $< -o $@
+
+.phony: clean test
 
 clean:
-	rm -f pokedex
+	-@rm -rf *.o stonesTest heapTest

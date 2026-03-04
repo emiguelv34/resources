@@ -1,0 +1,25 @@
+add_source_problem(
+	NAME rh
+	USER_SOURCE ${HW_DIR}/rh.cpp ${HW_DIR}/rh.cpp ${HW_DIR}/board.cpp ${HW_DIR}/solver.cpp ${HW_DIR}/heur.cpp ${HW_DIR}/move.cpp
+	TEST_SOURCE rh_tests.cpp)
+	
+set_tests_properties( Heuristic.DirectHeuristic0 PROPERTIES TIMEOUT 60)
+set_tests_properties( Heuristic.DirectHeuristic1 PROPERTIES TIMEOUT 60)
+set_tests_properties( Heuristic.DirectHeuristic234 PROPERTIES TIMEOUT 60)
+set_tests_properties( Heuristic.IndirectHeuristic0 PROPERTIES TIMEOUT 60)
+set_tests_properties( Heuristic.IndirectHeuristic1 PROPERTIES TIMEOUT 60)
+set_tests_properties( Heuristic.IndirectHeuristic234 PROPERTIES TIMEOUT 60)
+set_tests_properties( Heuristic.IndirectHeuristicFalsePositives PROPERTIES TIMEOUT 60)
+set_tests_properties( Heuristic.IndirectHeuristicTruePositives PROPERTIES TIMEOUT 60)
+set_tests_properties( Heuristic.IndirectHeuristicAboveBelow PROPERTIES TIMEOUT 60)
+set_tests_properties( OperatorLT.Nominal1 PROPERTIES TIMEOUT 60)
+set_tests_properties( Move.ConstructorAndScore PROPERTIES TIMEOUT 60)
+set_tests_properties( BoardTest.PotentialMoves1 PROPERTIES TIMEOUT 60)
+set_tests_properties( BoardTest.PotentialMoves2 PROPERTIES TIMEOUT 60)
+set_tests_properties( BoardTest.NoPotentialMoves PROPERTIES TIMEOUT 60)
+set_tests_properties( BoardTest.Undo1 PROPERTIES TIMEOUT 60)
+set_tests_properties( Solver.Basic PROPERTIES TIMEOUT 60)
+set_tests_properties( Solver.Difficult PROPERTIES TIMEOUT 60)
+set_tests_properties( Solver.InBoard10x10 PROPERTIES TIMEOUT 120)
+set_tests_properties( Solver.Direct PROPERTIES TIMEOUT 120)
+set_tests_properties( Solver.UnSolvable1 PROPERTIES TIMEOUT 60)

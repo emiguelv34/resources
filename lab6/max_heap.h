@@ -36,9 +36,29 @@ void MaxHeap<T>::pop() {
     if (data.empty()) {
         throw std::out_of_range("heap is empty");
     }
-
-    // TO BE COMPLETETED
-    
+    std::swap(data.front(), data.back());
+    data.pop_back();
+    if (data.empty()) {
+        return;
+    }
+    std::size_t index = 0;
+    while (true) {
+        std::size_t left_index = index * 2 + 1;
+        std::size_t right_index = left_index + 1;
+        T& current_item = data[index];
+        size_t max_index = index;
+        if (left_index < data.size()) {
+            max_index = left_index;
+        }
+        if (right_index < data.size() && data[right_index] > data[left_index]) {
+            max_index = right_index;
+        }
+        if (max_index == index || data[max_index] <= current_item) {
+            break;
+        }
+        std::swap(current_item, data[max_index]);
+        index = max_index;
+    }
 }
 
 template <typename T>

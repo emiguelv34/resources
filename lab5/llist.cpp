@@ -1,17 +1,20 @@
 #include "llist.h"
  
-LList::Item::Item(const int& v, Item* p, Item* n)
+template<typename T>
+LList<T>::Item::Item(const T& v, Item* p, Item* n)
 : val(v), prev(p), next(n)
 {
 }
 
-LList::LList() {
-  mHead = new Item(int(), nullptr, nullptr);
+template<typename T>
+LList<T>::LList() {
+  mHead = new Item(T(), nullptr, nullptr);
   mTail = mHead;
   mSize = 0;
 }
 
-LList::LList(const LList& other) {
+template<typename T>
+LList<T>::LList(const LList& other) {
   mHead = new Item(int(), nullptr, nullptr);
   mTail = mHead;
   mSize = 0;
@@ -22,7 +25,8 @@ LList::LList(const LList& other) {
   }
 }
 
-LList& LList::operator=(const LList& other) {
+template<typename T>
+LList<T>& LList<T>::operator=(const LList& other) {
   if(this == &other){
     return *this;
   }
@@ -35,20 +39,24 @@ LList& LList::operator=(const LList& other) {
   return *this;
 }
 
-LList::~LList() {
+template<typename T>
+LList<T>::~LList() {
   clear();
   delete mHead;
 }
 
-int LList::size() const {
+template<typename T>
+int LList<T>::size() const {
   return mSize;
 }
 
-bool LList::empty() const {
+template<typename T>
+bool LList<T>::empty() const {
   return mSize == 0;
 }
 
-void LList::push_back(const int& val) {
+template<typename T>
+void LList<T>::push_back(const T& val) {
   Item* n = new Item (val, mTail->prev, mTail);
   if(mHead == mTail){
     mHead = n;
@@ -61,12 +69,14 @@ void LList::push_back(const int& val) {
   ++mSize;
 }
 
-int& LList::get(int loc) {
+template<typename T>
+T& LList<T>::get(int loc) {
   Item *temp = getNodeAt(loc);
   return temp->val;
 }
 
-void LList::clear() {
+template<typename T>
+void LList<T>::clear() {
   while(mHead != mTail) {
     Item *temp = mHead->next;
     delete mHead;
@@ -75,7 +85,8 @@ void LList::clear() {
   mSize = 0;
 }
 
-typename LList::Item* LList::getNodeAt(int loc) const {
+template<typename T>
+typename LList<T>::Item* LList<T>::getNodeAt(int loc) const {
   if(loc >= 0 && loc < mSize){
     Item *temp = mHead;
     while(loc > 0){

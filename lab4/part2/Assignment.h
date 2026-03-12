@@ -13,7 +13,7 @@ public:
 	void setTotalPoints(int totalPoints);
 	bool isComplete();
 	void complete();
-	std::string getType();
+	virtual std::string getType();
 
 private:
 	std::string mName;

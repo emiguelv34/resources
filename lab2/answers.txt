@@ -1,1 +1,9 @@
 Answers go here!
+1. Change invaders[invaderRow][invaderRow] to invaders[invaderRow][invaderCol] - line 249
+2. Extra semi-colon - line 27
+3. Increment colIdx++ - line 62
+4. DeallocateWarriors(protectors, n, m); //correct
+   DeallocateWarriors(invaders, n, m); //wrong switch m and n - line 218
+5. Change the less than signs and fixing the statements - line 113 and 117
+   Line 113 = invader > protector
+   Line 117 = protecor > invader

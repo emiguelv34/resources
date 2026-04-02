@@ -41,13 +41,13 @@ void MaxHeap<T>::pop() {
     std::swap(data[0], data[data.size()-1]);
     data.pop_back();
 
-    std::size_t idx = 0;
+    std::size_t index = 0;
     std::size_t left_child, right_child, largest;
 
-    while(2 * idx + 1 < data.size()) { //0-th based indexing
-        left_child = 2 * idx + 1; //left child(idx) = 2idx + 1
-        right_child = 2 * idx + 2; //right child(idx) = 2idx + 2
-        largest = idx;
+    while (true) { //
+        left_child = 2 * index + 1; //left_child(p) = 2p + 1
+        right_child = 2 * index + 2; //right
+        largest = index;
 
         if (left_child < data.size() && data[left_child] > data[largest]) {
             largest = left_child;
@@ -55,12 +55,14 @@ void MaxHeap<T>::pop() {
         if (right_child < data.size() && data[right_child] > data[largest]) {
             largest = right_child;
         }
-        if (largest == idx) {
+        if (largest == index) {
             break;
         }
-        std::swap(data[idx], data[largest]);
-        idx = largest;
+
+        std::swap(data[index], data[largest]);
+        index = largest;
     }
+    
 }
 
 template <typename T>
